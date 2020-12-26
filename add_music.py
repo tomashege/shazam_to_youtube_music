@@ -1,6 +1,9 @@
 from ytmusicapi import YTMusic
 import pandas as pd
 # Add code to get the CSV documnet from shazam this is the next step.
+# create a local database to add new songs
+# 
+
 music_list = pd.read_csv("shazamlibrary.csv", skiprows=1)
 print(len(music_list))
 music_list.drop_duplicates(subset=['TrackKey'], keep="first", inplace=True)
